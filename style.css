@@ -1,0 +1,329 @@
+/* General styles */
+* {
+    margin: 0px;
+    padding: 0;
+}
+/* nav taginin içini flex yaparak sonrasında düzenlemeye hazır hale getiriyoruz, ayrıca bu yatay olarak sıralanmasını sağlıyor */
+/* nav-links ul elementinin classı olduğu için bu listenin elementlerini de yatay olarak göstericek */
+nav, .nav-links{
+    display: flex;
+}
+/* vh görünen pencere yüksekliğine göre orantılı olarak ayarlar, 17vh görünen pencere yüksekliğinin %17 sine eşittir */
+html {
+    scroll-behavior: smooth;
+  }
+nav{
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;
+}
+/* gap özelliği list elementleri arasında boşluk koymak için, padding ve margin list elementlerinde işe yaramıyor
+list style none özelliği listelerkenki noktaları kaldırıyor */
+.nav-links{
+    gap: 20px;
+    list-style: none;
+    font-size: 30px;
+}
+/* a tagine sahip olan elementlerin rengini değiştir, text decoration none yapmak altyazıyı kaldırıyor */
+a {
+    color: black;
+    text-decoration: none;
+}
+/* a tagine sahip bir elementin üzerine gelindiğinde tetiklenen özellikler, rengi gri yap, textin altına kırmızı çizgi ekle */
+a:hover{
+    color: gray;
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-offset: 20px;
+}
+.logo{
+    font-size: 30px;
+}
+/* Ata Budak yazısının üzerine gelince mouse sembolü değişiyordu, onu engellemek için */
+.logo:hover{
+    cursor: default;
+}
+section {
+    padding-top: 10px;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    
+}
+.section-container{
+    display: flex;
+    
+}
+
+/* PROFILE */
+
+/* gap profile sectionın içindeki bütün 
+elementler arasına boşluk koyuyor, yani bizim projemizde 
+2 tane div arasına */
+#profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    height: 80vh;
+    
+}
+.section_pic-container{
+    display: flex;
+    width: 400px;
+    height: 400px;
+    margin: auto 0;
+}
+.section_text{
+    text-align: center;
+    
+}
+.section_text p{
+    font-weight: 600;
+
+}
+.section_text_p1 {
+    text-align: center;
+}
+  
+.section_text_p2 {
+font-size: 30px;
+margin-bottom: 1rem;
+}
+.title {
+    font-size: 50px;
+    text-align: center;
+  }
+
+#socials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 1rem;
+}
+.icon{
+    cursor: pointer;
+    height: 60px;
+}
+
+/* BUTTONS */
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+  
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+.btn-color-1,
+.btn-color-2 {
+  border: rgb(3, 158, 158) 0.1rem solid;
+}
+
+.btn-color-1:hover,
+.btn-color-2:hover {
+  cursor: pointer;
+}
+
+.btn-color-1,
+.btn-color-2:hover {
+  background: rgb(255, 166, 1);
+  color: rgb(255, 255, 255);
+}
+
+.btn-color-1:hover {
+  background: rgb(0, 0, 0);
+  border: rgb(255, 4, 4) 0.1rem solid;
+}
+
+.btn-color-2 {
+  background: none;
+}
+
+.btn-color-2:hover {
+  border: rgb(255, 4, 4) 0.1rem solid;
+}
+
+.btn-container {
+  gap: 1rem;
+}
+
+
+/* ABOUT SECTION */
+#about{
+    position: relative;
+}
+.about-containers{
+    gap: 3rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.about-details-container{
+    justify-content: center;
+    flex-direction: column;
+}
+
+.about-containers, .about-details-container{
+    display: flex;
+}
+.about-pic{
+    border-radius: 2rem ;
+}
+.arrow{
+    position: absolute;
+    right: -5rem;
+    bottom: 2.5rem;
+}
+.details-container{
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: rgb(53,53,53) 1px solid;
+    border-color: rgb(163,163,163);
+    flex: 1;
+    /* bu satır details container içindeki her şeyin aynı miktarda yer kaplamasını sağlıyor */
+    text-align: center;
+    /* yazıları merkeze hizala */
+    
+    
+}
+/* EXPERIENCE SECTION */
+#experience{
+    position: relative;
+}
+.experience-sub-title{
+    color: rgb(85, 85, 85);
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.experience-details-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.article-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    justify-content: space-around;
+    
+}
+article{
+    display: flex;
+    justify-content: space-around;
+    width: 10rem;
+    gap: 0.5rem;
+    
+}
+article .icon{
+    cursor: default;
+    height: 30px;
+}
+/* Hobbies SECTION */
+#hobbies {
+  position: relative;
+}
+
+.color-container {
+  border-color: rgb(163, 163, 163);
+  background: rgb(250, 250, 250);
+}
+
+.hobbies-img {
+  border-radius: 2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.hobbies-title {
+  margin: 1rem;
+  color: black;
+}
+
+.hobbies-btn {
+  color: black;
+  border-color: rgb(163, 163, 163);
+}
+/* PROJECTS SECTION */
+
+
+#projects {
+    position: relative;
+  }
+  
+  .color-container {
+    border-color: rgb(163, 163, 163);
+    background: rgb(250, 250, 250);
+  }
+  
+  .project-img {
+    border-radius: 2rem;
+    width: 90%;
+    height: 90%;
+  }
+  
+  .project-title {
+    margin: 1rem;
+    color: black;
+  }
+  
+  .project-btn {
+    color: black;
+    border-color: rgb(163, 163, 163);
+  }
+
+/* CONTACT SECTION */
+#contact {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70vh;
+  }
+  
+  .contact-info-upper-container {
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    border: rgb(53, 53, 53) 0.1rem solid;
+    border-color: rgb(163, 163, 163);
+    background: (250, 250, 250);
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+  
+  .contact-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem;
+  }
+  
+  .contact-info-container p {
+    font-size: larger;
+  }
+  
+  .contact-icon {
+    cursor: default;
+  }
+  
+  .email-icon {
+    height: 2.5rem;
+  }
+ /*  FOOTER */
+ footer {
+    height: 26vh;
+    margin: 0 1rem;
+  }
+  
+  footer p {
+    text-align: center;
+  }
