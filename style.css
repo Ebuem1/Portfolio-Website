@@ -61,6 +61,14 @@ section {
 /* gap profile sectionın içindeki bütün 
 elementler arasına boşluk koyuyor, yani bizim projemizde 
 2 tane div arasına */
+
+img.yuvarlak {
+  border-radius: 70%;
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+}
+
 #profile{
     display: flex;
     justify-content: center;
@@ -327,3 +335,26 @@ article .icon{
   footer p {
     text-align: center;
   }
+
+/* Dark mode stilleri */
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode nav {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .details-container {
+  border-color: #ffffff;
+}
+
+.dark-mode a {
+  color: #ffffff;
+}
+
+.dark-mode a:hover {
+  color: #bbbbbb;
+}
+  
